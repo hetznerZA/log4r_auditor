@@ -1,7 +1,7 @@
-require 'log4r_auditor/auditor'
 require 'soar_auditing_format'
 require 'time'
 require 'securerandom'
+require "log4r_auditor"
 
 class Main
   def test_sanity

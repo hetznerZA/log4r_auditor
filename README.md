@@ -44,16 +44,16 @@ Audit using the API methods inherited from SoarAuditorApi::AuditorAPI, e.g.:
 ## Detailed example
 
 ```ruby
-require 'log4r_auditor'
 require 'soar_auditing_format'
 require 'time'
 require 'securerandom'
+require "log4r_auditor"
 
 class Main
   def test_sanity
     @iut = Log4rAuditor::Log4rAuditor.new
-    @log4r_configuration =
-    { }
+    @log4r_configuration = { 'file_name' => 'logfile',
+                             'standard_stream' => 'stdout' }
     @iut.configure(@log4r_configuration)
     @iut.set_audit_level(:debug)
 
