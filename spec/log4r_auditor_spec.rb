@@ -48,6 +48,7 @@ describe Log4rAuditor do
     it 'should reject a configuration with standard stream not set to stderr or stdout' do
       expect(@iut.configuration_is_valid?(@valid_log4r_configuration.dup.merge('standard_stream' => 'stdout'))).to eq(true)
       expect(@iut.configuration_is_valid?(@valid_log4r_configuration.dup.merge('standard_stream' => 'stderr'))).to eq(true)
+      expect(@iut.configuration_is_valid?(@valid_log4r_configuration.dup.merge('standard_stream' => 'none'  ))).to eq(true)
       expect(@iut.configuration_is_valid?(@valid_log4r_configuration.dup.merge('standard_stream' => 'stdbla'))).to eq(false)
     end
   end
