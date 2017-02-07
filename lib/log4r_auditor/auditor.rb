@@ -18,6 +18,11 @@ module Log4rAuditor
       return true
     end
 
+    #inversion of control method required by the AuditorAPI to hint direct call preference to auditor
+    def prefer_direct_call?
+      true
+    end
+
     #inversion of control method required by the AuditorAPI to send the audit event to the auditor
     def audit(audit_data)
       @log4r.debug(audit_data)

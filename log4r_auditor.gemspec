@@ -26,6 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "soar_auditing_format", "~> 0.0.5"
 
   spec.add_dependency "log4r", "~> 1.1"
-  spec.add_dependency "soar_auditor_api", "~> 0.0.12"
+  spec.add_dependency "soar_auditor_api", "~> 1.0"
 
 end
